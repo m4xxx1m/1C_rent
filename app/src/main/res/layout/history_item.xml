@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+    <TextView
+        android:id="@+id/history_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/history_taken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/took"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:id="@+id/history_put"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/put"/>
+    <TextView
+        android:id="@+id/history_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rent_time"/>
+</LinearLayout>

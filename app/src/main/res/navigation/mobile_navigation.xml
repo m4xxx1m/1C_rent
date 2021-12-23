@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_personal_information">
+
+    <fragment
+        android:id="@+id/nav_personal_information"
+        android:name="com.company.onecrentapp.ui.fragments.PersonalInfoFragment"
+        android:label="@string/personal_information"
+        tools:layout="@layout/fragment_personal_info">
+        <action
+            android:id="@+id/action_to_edit_personal_edit"
+            app:destination="@id/nav_edit_info"/>
+        <action
+            android:id="@+id/action_from_info_to_rent"
+            app:destination="@id/nav_rent"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_rent"
+        android:name="com.company.onecrentapp.ui.fragments.RentFragment"
+        android:label="@string/rent"
+        tools:layout="@layout/fragment_rent">
+        <action
+            android:id="@+id/action_to_start_rent"
+            app:destination="@id/nav_start_rent"/>
+        <action
+            android:id="@+id/action_to_stop_rent"
+            app:destination="@id/nav_stop_rent"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_start_rent"
+        android:name="com.company.onecrentapp.ui.fragments.StartRentFragment"
+        android:label="@string/start_rent"
+        tools:layout="@layout/fragment_start_rent"/>
+
+    <fragment
+        android:id="@+id/nav_stop_rent"
+        android:name="com.company.onecrentapp.ui.fragments.StopRentFragment"
+        android:label="@string/stop_rent"
+        tools:layout="@layout/fragment_stop_rent"/>
+
+    <fragment
+        android:id="@+id/nav_stations"
+        android:name="com.company.onecrentapp.ui.fragments.StationsFragment"
+        android:label="@string/stations"
+        tools:layout="@layout/fragment_stations" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.company.onecrentapp.ui.fragments.HistoryFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/nav_feedback_and_faq"
+        android:name="com.company.onecrentapp.ui.fragments.FeedbackFAQFragment"
+        android:label="@string/feedback_and_faq"
+        tools:layout="@layout/fragment_feedback_faq">
+        <action
+            android:id="@+id/action_to_feedback"
+            app:destination="@id/nav_feedback"/>
+        <action
+            android:id="@+id/action_to_faq"
+            app:destination="@id/nav_faq"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.company.onecrentapp.ui.fragments.FeedbackFragment"
+        android:label="@string/feedback"
+        tools:layout="@layout/fragment_feedback"/>
+
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.company.onecrentapp.ui.fragments.FAQFragment"
+        android:label="@string/faq"
+        tools:layout="@layout/fragment_faq"/>
+
+    <fragment
+        android:id="@+id/nav_edit_info"
+        android:name="com.company.onecrentapp.ui.fragments.EditPersonalInfoFragment"
+        android:label="@string/edit"
+        tools:layout="@layout/fragment_edit_personal_info"/>
+</navigation>
